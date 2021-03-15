@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="description" content="Mike Bars - Résumé" />
+
+    <meta name="theme-color" content="deepskyblue" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0"
+    />
+
+    <title>Mike Bars - Resume</title>
+
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+
+        user-select: inherit;
+      }
+
+      *:focus {
+        border: black solid thick;
+        outline: none;
+      }
+
+      html,
+      body {
+        box-sizing: border-box;
+
+        font-family: Futura, sans-serif;
+        font-size: 0;
+        font-style: italic;
+        font-weight: bolder;
+
+        height: 100%;
+        min-height: 100vh;
+        width: 100%;
+        min-width: 100vw;
+
+        margin: 0;
+        padding: 0;
+
+        user-select: none;
+      }
+
+      .background {
+        background-color: deepskyblue;
+
+        height: 100%;
+        width: 100%;
+      }
+
+      .page {
+        background-color: white;
+
+        position: relative;
+
+        margin: auto;
+        padding: 0;
+      }
+
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        .page {
+          height: calc(1100vw / 8.5);
+          width: 100vw;
+        }
+      }
+
+      @media screen and (min-aspect-ratio: 1 / 1) {
+        .page {
+          height: 100vh;
+          width: calc(850vh / 11);
+        }
+      }
+
+      @media print {
+        .page {
+          height: 792pt;
+          width: 612pt;
+        }
+      }
+
+      .row {
+        height: calc(100% / 8);
+        width: 100%;
+      }
+
+      .experience.row {
+        background-color: currentColor;
+      }
+
+      .cell {
+        display: inline-block;
+
+        height: 100%;
+      }
+
+      .experience .cell {
+        width: calc(100% / 3);
+      }
+
+      .footer .first.cell,
+      .footer .last.cell {
+        width: calc(calc(100% / 2) - calc(calc(100% / 6) / 2));
+      }
+
+      .footer .middle.cell {
+        width: calc(100% / 6);
+      }
+
+      .text-container {
+        position: relative;
+
+        height: 100%;
+        width: 100%;
+
+        text-align: center;
+
+        overflow: hidden;
+      }
+
+      .link:focus .text-container,
+      .link:hover .text-container {
+        border: black dashed thick;
+      }
+
+      .text-content {
+        color: black;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        width: 100%;
+      }
+
+      @media screen {
+        .header .text-content {
+          font-size: 6vmin;
+        }
+      }
+
+      @media print {
+        .header .text-content {
+          font-size: 48pt;
+        }
+      }
+
+      @media screen {
+        .experience .cell .text-content {
+          font-size: 2vmin;
+        }
+      }
+
+      @media print {
+        .experience .cell .text-content {
+          font-size: 16pt;
+        }
+      }
+
+      @media screen {
+        .experience .first.cell .text-content {
+          font-size: 3vmin;
+        }
+      }
+
+      @media print {
+        .experience .first.cell .text-content {
+          font-size: 24pt;
+        }
+      }
+
+      .footer .text-content {
+        font-style: normal;
+        font-weight: initial;
+
+        width: fit-content;
+      }
+
+      @media screen {
+        .footer .text-content {
+          font-size: 2vmin;
+        }
+      }
+
+      @media print {
+        .footer .text-content {
+          font-size: 16pt;
+        }
+      }
+
+      .footer {
+        position: relative;
+      }
+
+      .footer .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      @media screen {
+        .footer .logo {
+          font-size: 4vmin;
+        }
+      }
+
+      @media print {
+        .footer .logo {
+          font-size: 32pt;
+        }
+      }
+
+      .simspace {
+        color: hsl(180deg, 100%, 75%);
+      }
+
+      .iodine {
+        color: hsl(300deg, 100%, 75%);
+      }
+
+      .goodrx {
+        color: hsl(60deg, 100%, 75%);
+      }
+
+      .social-native {
+        color: hsl(0deg, 100%, 75%);
+      }
+
+      .ford-motor-company {
+        color: hsl(120deg, 100%, 75%);
+      }
+
+      .university-of-illinois {
+        color: hsl(240deg, 100%, 75%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="background">
+      <main class="page">
+        <header class="header row">
+          <section class="text-container">
+            <div class="text-content">Mike Bars</div>
+          </section>
+        </header>
+
+        <section class="simspace experience row">
+          <section class="first cell">
+            <section class="text-container">
+              <div class="text-content">SimSpace</div>
+            </section>
+          </section>
+
+          <section class="cell">
+            <section class="text-container">
+              <div class="text-content">Lead Software Engineer</div>
+            </section>
+          </section>
+
+          <section class="last cell">
+            <section class="text-container">
+              <div class="text-content">2017 to Present</div>
+            </section>
+          </section>
+        </section>
+
+        <section class="iodine experience row">
+          <section class="first cell">
+            <section class="text-container">
+              <div class="text-content">Iodine</div>
+            </section>
+          </section>
+
+          <section class="cell">
+            <section class="text-container">
+              <div class="text-content">Senior Software Engineer</div>
+            </section>
+          </section>
+
+          <section class="last cell">
+            <section class="text-container">
+              <div class="text-content">2016 to 2017</div>
+            </section>
+          </section>
+        </section>
+
+        <section class="goodrx experience row">
+          <section class="first cell">
+            <section class="text-container">
+              <div class="text-content">GoodRx</div>
+            </section>
+          </section>
+
+          <section class="cell">
+            <section class="text-container">
+              <div class="text-content">Lead Software Engineer</div>
+            </section>
+          </section>
+
+          <section class="last cell">
+            <section class="text-container">
+              <div class="text-content">2016 to 2017</div>
+            </section>
+          </section>
+        </section>
+
+        <section class="social-native experience row">
+          <section class="first cell">
+            <section class="text-container">
+              <div class="text-content">Social Native</div>
+            </section>
+          </section>
+
+          <section class="cell">
+            <section class="text-container">
+              <div class="text-content">Software Engineer</div>
+            </section>
+          </section>
+
+          <section class="last cell">
+            <section class="text-container">
+              <div class="text-content">2015 to 2016</div>
+            </section>
+          </section>
+        </section>
+
+        <section class="ford-motor-company experience row">
+          <section class="first cell">
+            <section class="text-container">
+              <div class="text-content">Ford Motor Company</div>
+            </section>
+          </section>
+
+          <section class="cell">
+            <section class="text-container">
+              <div class="text-content">Software Engineer</div>
+            </section>
+          </section>
+
+          <section class="last cell">
+            <section class="text-container">
+              <div class="text-content">2014 to 2015</div>
+            </section>
+          </section>
+        </section>
+
+        <section class="university-of-illinois experience row">
+          <section class="first cell">
+            <section class="text-container">
+              <div class="text-content">University of Illinois</div>
+            </section>
+          </section>
+
+          <section class="cell">
+            <section class="text-container">
+              <div class="text-content">B.S. Electrical Engineering</div>
+            </section>
+          </section>
+
+          <section class="last cell">
+            <section class="text-container">
+              <div class="text-content">2010 to 2014</div>
+            </section>
+          </section>
+        </section>
+
+        <footer class="footer row">
+          <section class="first cell">
+            <a
+              href="https://mikebars.github.io/"
+              class="link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <section class="text-container">
+                <div class="text-content">https://mikebars.github.io/</div>
+              </section>
+            </a>
+          </section>
+
+          <section class="middle cell">
+            <section class="text-container">
+              <svg
+                class="logo"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                width="1em"
+                height="1em"
+                viewBox="0 0 10 10"
+              >
+                <g id="logo">
+                  <rect fill="black" x="0" y="0" width="4" height="2" />
+                  <rect fill="black" x="6" y="0" width="4" height="2" />
+                  <rect fill="black" x="0" y="4" width="2" height="6" />
+                  <rect fill="black" x="4" y="4" width="2" height="4" />
+                  <rect fill="black" x="8" y="4" width="2" height="6" />
+                </g>
+              </svg>
+            </section>
+          </section>
+
+          <section class="last cell">
+            <a
+              href="https://github.com/mikebars/"
+              class="link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <section class="text-container">
+                <div class="text-content">https://github.com/mikebars</div>
+              </section>
+            </a>
+          </section>
+        </footer>
+      </main>
+    </section>
+  </body>
+</html>
