@@ -38,10 +38,12 @@
       body {
         box-sizing: border-box;
 
-        font-family: Futura, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+          segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
+          sans-serif;
         font-size: 0;
-        font-style: italic;
-        font-weight: bolder;
+        font-style: normal;
+        font-weight: bold;
 
         height: 100%;
         min-height: 100vh;
@@ -78,11 +80,16 @@
         .page {
           height: calc(1100vw / 8.5);
           width: 100vw;
+
+          top: 50%;
+          transform: translateY(-60%);
         }
       }
 
       @media screen and (min-aspect-ratio: 1 / 1) {
         .page {
+          box-shadow: 0 0 100vmax black;
+
           height: 100vh;
           width: calc(850vh / 11);
         }
@@ -96,12 +103,16 @@
       }
 
       .row {
-        height: calc(100% / 8);
+        height: calc(100% * 1 / 8);
         width: 100%;
       }
 
       .experience.row {
         background-color: currentColor;
+      }
+
+      .footer.row {
+        border-bottom: none;
       }
 
       .cell {
@@ -111,7 +122,9 @@
       }
 
       .experience .cell {
-        width: calc(100% / 3);
+        padding: 0 5%;
+
+        width: calc(100% * 1 / 2);
       }
 
       .footer .first.cell,
@@ -228,28 +241,28 @@
         }
       }
 
-      .simspace {
-        color: hsl(180deg, 100%, 75%);
+      .cyan {
+        color: hsl(180deg, 100%, 90%);
       }
 
-      .iodine {
-        color: hsl(300deg, 100%, 75%);
+      .magenta {
+        color: hsl(300deg, 100%, 90%);
       }
 
-      .goodrx {
-        color: hsl(60deg, 100%, 75%);
+      .yellow {
+        color: hsl(60deg, 100%, 90%);
       }
 
-      .social-native {
-        color: hsl(0deg, 100%, 75%);
+      .red {
+        color: hsl(0deg, 100%, 90%);
       }
 
-      .ford-motor-company {
-        color: hsl(120deg, 100%, 75%);
+      .green {
+        color: hsl(120deg, 100%, 90%);
       }
 
-      .university-of-illinois {
-        color: hsl(240deg, 100%, 75%);
+      .blue {
+        color: hsl(240deg, 100%, 90%);
       }
     </style>
   </head>
@@ -263,122 +276,86 @@
           </section>
         </header>
 
-        <section class="simspace experience row">
+        <section class="cyan experience row">
+          <section class="first cell">
+            <section class="text-container">
+              <div class="text-content">LeaseLock</div>
+            </section>
+          </section>
+
+          <section class="last cell">
+            <section class="text-container">
+              <div class="text-content">Lead Software Engineer</div>
+            </section>
+          </section>
+        </section>
+
+        <section class="magenta experience row">
           <section class="first cell">
             <section class="text-container">
               <div class="text-content">SimSpace</div>
             </section>
           </section>
 
-          <section class="cell">
+          <section class="last cell">
             <section class="text-container">
               <div class="text-content">Lead Software Engineer</div>
             </section>
           </section>
-
-          <section class="last cell">
-            <section class="text-container">
-              <div class="text-content">2017 to Present</div>
-            </section>
-          </section>
         </section>
 
-        <section class="iodine experience row">
-          <section class="first cell">
-            <section class="text-container">
-              <div class="text-content">Iodine</div>
-            </section>
-          </section>
-
-          <section class="cell">
-            <section class="text-container">
-              <div class="text-content">Senior Software Engineer</div>
-            </section>
-          </section>
-
-          <section class="last cell">
-            <section class="text-container">
-              <div class="text-content">2016 to 2017</div>
-            </section>
-          </section>
-        </section>
-
-        <section class="goodrx experience row">
+        <section class="yellow experience row">
           <section class="first cell">
             <section class="text-container">
               <div class="text-content">GoodRx</div>
             </section>
           </section>
 
-          <section class="cell">
+          <section class="last cell">
             <section class="text-container">
               <div class="text-content">Lead Software Engineer</div>
             </section>
           </section>
-
-          <section class="last cell">
-            <section class="text-container">
-              <div class="text-content">2016 to 2017</div>
-            </section>
-          </section>
         </section>
 
-        <section class="social-native experience row">
+        <section class="red experience row">
           <section class="first cell">
             <section class="text-container">
               <div class="text-content">Social Native</div>
             </section>
           </section>
 
-          <section class="cell">
+          <section class="last cell">
             <section class="text-container">
               <div class="text-content">Software Engineer</div>
             </section>
           </section>
-
-          <section class="last cell">
-            <section class="text-container">
-              <div class="text-content">2015 to 2016</div>
-            </section>
-          </section>
         </section>
 
-        <section class="ford-motor-company experience row">
+        <section class="green experience row">
           <section class="first cell">
             <section class="text-container">
               <div class="text-content">Ford Motor Company</div>
             </section>
           </section>
 
-          <section class="cell">
+          <section class="last cell">
             <section class="text-container">
               <div class="text-content">Software Engineer</div>
             </section>
           </section>
-
-          <section class="last cell">
-            <section class="text-container">
-              <div class="text-content">2014 to 2015</div>
-            </section>
-          </section>
         </section>
 
-        <section class="university-of-illinois experience row">
+        <section class="blue experience row">
           <section class="first cell">
             <section class="text-container">
               <div class="text-content">University of Illinois</div>
             </section>
           </section>
 
-          <section class="cell">
-            <section class="text-container">
-              <div class="text-content">B.S. Electrical Engineering</div>
-            </section>
-          </section>
-
           <section class="last cell">
             <section class="text-container">
-              <div class="text-content">2010 to 2014</div>
+              <div class="text-content">B.S. Electrical Engineering</div>
             </section>
           </section>
         </section>
