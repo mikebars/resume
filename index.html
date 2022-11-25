@@ -237,75 +237,99 @@
         }
       }
 
-      .cyan {
-        background-color: hsl(180deg, 100%, 90%);
-      }
-
-      .magenta {
-        background-color: hsl(300deg, 100%, 90%);
-      }
-
-      .yellow {
-        background-color: hsl(60deg, 100%, 90%);
-      }
-
-      .red {
-        background-color: hsl(0deg, 100%, 90%);
-      }
-
-      .green {
-        background-color: hsl(120deg, 100%, 90%);
-      }
-
-      .blue {
-        background-color: hsl(240deg, 100%, 90%);
-      }
-
-      .green-to-blue {
+      .blue-to-green {
         background: linear-gradient(
-          -45deg,
-          hsl(120deg, 100%, 90%),
-          hsl(240deg, 100%, 90%)
+          135deg,
+          hsl(240deg, 100%, 80%),
+          hsl(120deg, 100%, 80%)
         );
       }
 
       .blue-to-red {
         background: linear-gradient(
-          -45deg,
-          hsl(240deg, 100%, 90%),
-          hsl(0deg, 100%, 90%)
-        );
-      }
-
-      .red-to-green {
-        background: linear-gradient(
-          -45deg,
-          hsl(0deg, 100%, 90%),
-          hsl(120deg, 100%, 90%)
-        );
-      }
-
-      .magenta-to-yellow {
-        background: linear-gradient(
-          -45deg,
-          hsl(300deg, 100%, 90%),
-          hsl(60deg, 100%, 90%)
-        );
-      }
-
-      .yellow-to-cyan {
-        background: linear-gradient(
-          -45deg,
-          hsl(60deg, 100%, 90%),
-          hsl(180deg, 100%, 90%)
+          135deg,
+          hsl(240deg, 100%, 80%),
+          hsl(0deg, 100%, 80%)
         );
       }
 
       .cyan-to-magenta {
         background: linear-gradient(
-          -45deg,
-          hsl(180deg, 100%, 90%),
-          hsl(300deg, 100%, 90%)
+          135deg,
+          hsl(180deg, 100%, 80%),
+          hsl(300deg, 100%, 80%)
+        );
+      }
+
+      .cyan-to-yellow {
+        background: linear-gradient(
+          135deg,
+          hsl(180deg, 100%, 80%),
+          hsl(60deg, 100%, 80%)
+        );
+      }
+
+      .red-to-blue {
+        background: linear-gradient(
+          135deg,
+          hsl(0deg, 100%, 80%),
+          hsl(240deg, 100%, 80%)
+        );
+      }
+
+      .red-to-green {
+        background: linear-gradient(
+          135deg,
+          hsl(0deg, 100%, 80%),
+          hsl(120deg, 100%, 80%)
+        );
+      }
+
+      .green-to-blue {
+        background: linear-gradient(
+          135deg,
+          hsl(120deg, 100%, 80%),
+          hsl(240deg, 100%, 80%)
+        );
+      }
+
+      .green-to-red {
+        background: linear-gradient(
+          135deg,
+          hsl(120deg, 100%, 80%),
+          hsl(0deg, 100%, 80%)
+        );
+      }
+
+      .magenta-to-cyan {
+        background: linear-gradient(
+          135deg,
+          hsl(300deg, 100%, 80%),
+          hsl(180deg, 100%, 80%)
+        );
+      }
+
+      .magenta-to-yellow {
+        background: linear-gradient(
+          135deg,
+          hsl(300deg, 100%, 80%),
+          hsl(60deg, 100%, 80%)
+        );
+      }
+
+      .yellow-to-cyan {
+        background: linear-gradient(
+          135deg,
+          hsl(60deg, 100%, 80%),
+          hsl(180deg, 100%, 80%)
+        );
+      }
+
+      .yellow-to-magenta {
+        background: linear-gradient(
+          135deg,
+          hsl(60deg, 100%, 80%),
+          hsl(300deg, 100%, 80%)
         );
       }
     </style>
@@ -321,13 +345,13 @@
         </header>
 
         <section class="experience row">
-          <section class="cyan first cell">
+          <section class="first cell magenta-to-cyan">
             <section class="text-container">
               <div class="text-content">LeaseLock</div>
             </section>
           </section>
 
-          <section class="green-to-blue last cell">
+          <section class="last cell red-to-green">
             <section class="text-container">
               <div class="text-content">Lead Software Engineer</div>
             </section>
@@ -335,13 +359,13 @@
         </section>
 
         <section class="experience row">
-          <section class="magenta first cell">
+          <section class="first cell yellow-to-magenta">
             <section class="text-container">
               <div class="text-content">SimSpace</div>
             </section>
           </section>
 
-          <section class="blue-to-red last cell">
+          <section class="last cell green-to-blue">
             <section class="text-container">
               <div class="text-content">Lead Software Engineer</div>
             </section>
@@ -349,13 +373,13 @@
         </section>
 
         <section class="experience row">
-          <section class="yellow first cell">
+          <section class="first cell cyan-to-yellow">
             <section class="text-container">
               <div class="text-content">GoodRx</div>
             </section>
           </section>
 
-          <section class="red-to-green last cell">
+          <section class="last cell blue-to-red">
             <section class="text-container">
               <div class="text-content">Lead Software Engineer</div>
             </section>
@@ -363,13 +387,13 @@
         </section>
 
         <section class="experience row">
-          <section class="red first cell">
+          <section class="first cell green-to-red">
             <section class="text-container">
               <div class="text-content">Social Native</div>
             </section>
           </section>
 
-          <section class="magenta-to-yellow last cell">
+          <section class="last cell cyan-to-magenta">
             <section class="text-container">
               <div class="text-content">Software Engineer</div>
             </section>
@@ -377,13 +401,13 @@
         </section>
 
         <section class="experience row">
-          <section class="green first cell">
+          <section class="first cell blue-to-green">
             <section class="text-container">
               <div class="text-content">Ford Motor Company</div>
             </section>
           </section>
 
-          <section class="yellow-to-cyan last cell">
+          <section class="last cell magenta-to-yellow">
             <section class="text-container">
               <div class="text-content">Software Engineer</div>
             </section>
@@ -391,13 +415,13 @@
         </section>
 
         <section class="experience row">
-          <section class="blue first cell">
+          <section class="first cell red-to-blue">
             <section class="text-container">
               <div class="text-content">University of Illinois</div>
             </section>
           </section>
 
-          <section class="cyan-to-magenta last cell">
+          <section class="last cell yellow-to-cyan">
             <section class="text-container">
               <div class="text-content">B.S. Electrical Engineering</div>
             </section>
