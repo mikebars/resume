@@ -10,12 +10,159 @@
 
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
     />
 
     <title>Mike Bars - Resume</title>
 
     <style>
+      :root {
+        --lightness: 70%;
+        --saturation: 100%;
+
+        --color-0: hsl(0deg, var(--saturation), var(--lightness));
+        --color-30: hsl(30deg, var(--saturation), var(--lightness));
+        --color-60: hsl(60deg, var(--saturation), var(--lightness));
+        --color-90: hsl(90deg, var(--saturation), var(--lightness));
+        --color-120: hsl(120deg, var(--saturation), var(--lightness));
+        --color-150: hsl(150deg, var(--saturation), var(--lightness));
+        --color-180: hsl(180deg, var(--saturation), var(--lightness));
+        --color-210: hsl(210deg, var(--saturation), var(--lightness));
+        --color-240: hsl(240deg, var(--saturation), var(--lightness));
+        --color-270: hsl(270deg, var(--saturation), var(--lightness));
+        --color-300: hsl(300deg, var(--saturation), var(--lightness));
+        --color-330: hsl(330deg, var(--saturation), var(--lightness));
+
+        --angle-45: 45deg;
+        --angle-135: 135deg;
+
+        --gradient-60-240-asc: linear-gradient(
+          var(--angle-135),
+          var(--color-60) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-90) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-120) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-150) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-180) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-210) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-240) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+        --gradient-60-240-desc: linear-gradient(
+          var(--angle-135),
+          var(--color-60) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-30) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-0) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-330) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-300) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-270) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-240) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+
+        --gradient-90-270-asc: linear-gradient(
+          var(--angle-45),
+          var(--color-90) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-120) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-150) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-180) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-210) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-240) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-270) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+        --gradient-90-270-desc: linear-gradient(
+          var(--angle-45),
+          var(--color-90) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-60) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-30) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-0) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-330) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-300) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-270) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+
+        --gradient-180-0-asc: linear-gradient(
+          var(--angle-135),
+          var(--color-180) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-210) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-240) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-270) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-300) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-330) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-0) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+        --gradient-180-0-desc: linear-gradient(
+          var(--angle-135),
+          var(--color-180) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-150) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-120) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-90) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-60) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-30) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-0) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+
+        --gradient-210-30-asc: linear-gradient(
+          var(--angle-135),
+          var(--color-210) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-240) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-270) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-300) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-330) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-0) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-30) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+        --gradient-210-30-desc: linear-gradient(
+          var(--angle-135),
+          var(--color-210) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-180) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-150) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-120) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-90) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-60) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-30) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+
+        --gradient-300-120-asc: linear-gradient(
+          var(--angle-45),
+          var(--color-300) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-330) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-0) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-30) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-60) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-90) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-120) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+        --gradient-300-120-desc: linear-gradient(
+          var(--angle-45),
+          var(--color-300) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-270) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-240) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-210) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-180) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-150) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-120) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+
+        --gradient-330-150-asc: linear-gradient(
+          var(--angle-45),
+          var(--color-330) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-0) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-30) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-60) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-90) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-120) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-150) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+        --gradient-330-150-desc: linear-gradient(
+          var(--angle-45),
+          var(--color-330) calc(100% * 0 / 7) calc(100% * 1 / 7),
+          var(--color-300) calc(100% * 1 / 7) calc(100% * 2 / 7),
+          var(--color-270) calc(100% * 2 / 7) calc(100% * 3 / 7),
+          var(--color-240) calc(100% * 3 / 7) calc(100% * 4 / 7),
+          var(--color-210) calc(100% * 4 / 7) calc(100% * 5 / 7),
+          var(--color-180) calc(100% * 5 / 7) calc(100% * 6 / 7),
+          var(--color-150) calc(100% * 6 / 7) calc(100% * 7 / 7)
+        );
+      }
+
       *,
       *:before,
       *:after {
@@ -76,17 +223,14 @@
         padding: 0;
       }
 
-      @media screen and (max-aspect-ratio: 1 / 1) {
+      @media screen and (max-aspect-ratio: 17 / 22) {
         .page {
-          height: calc(1100vw / 8.5);
+          height: 100vh;
           width: 100vw;
-
-          top: 50%;
-          transform: translateY(-60%);
         }
       }
 
-      @media screen and (min-aspect-ratio: 1 / 1) {
+      @media screen and (min-aspect-ratio: 17 / 22) {
         .page {
           box-shadow: 0 0 100vmax black;
 
@@ -102,36 +246,6 @@
         }
       }
 
-      .row {
-        height: calc(100% * 1 / 8);
-        width: 100%;
-      }
-
-      .footer.row {
-        border-bottom: none;
-      }
-
-      .cell {
-        display: inline-block;
-
-        height: 100%;
-      }
-
-      .experience .cell {
-        padding: 0 5%;
-
-        width: calc(100% * 1 / 2);
-      }
-
-      .footer .first.cell,
-      .footer .last.cell {
-        width: calc(calc(100% / 2) - calc(calc(100% / 6) / 2));
-      }
-
-      .footer .middle.cell {
-        width: calc(100% / 6);
-      }
-
       .text-container {
         position: relative;
 
@@ -141,11 +255,6 @@
         text-align: center;
 
         overflow: hidden;
-      }
-
-      .link:focus .text-container,
-      .link:hover .text-container {
-        border: black dashed thick;
       }
 
       .text-content {
@@ -159,9 +268,19 @@
         width: 100%;
       }
 
+      .link:focus .text-container,
+      .link:hover .text-container {
+        border: black dashed thick;
+      }
+
+      .header {
+        height: calc(100% * 1 / 8);
+        width: 100%;
+      }
+
       @media screen {
         .header .text-content {
-          font-size: 6vmin;
+          font-size: 6vh;
         }
       }
 
@@ -171,27 +290,136 @@
         }
       }
 
+      .row {
+        height: calc(100% * 1 / 8);
+        width: 100%;
+      }
+
+      .row:focus,
+      .row:hover {
+        border: none;
+        filter: invert(1);
+        outline: none;
+      }
+
+      .column {
+        display: inline-block;
+        padding: 0 5%;
+
+        height: 100%;
+        width: calc(100% * 1 / 2);
+      }
+
       @media screen {
-        .experience .cell .text-content {
-          font-size: 2vmin;
+        .column-1 .text-content {
+          font-size: 3vh;
+        }
+
+        .column-2 .text-content {
+          font-size: 2.5vh;
         }
       }
 
       @media print {
-        .experience .cell .text-content {
+        .column-1 .text-content {
+          font-size: 24pt;
+        }
+
+        .column-2 .text-content {
           font-size: 16pt;
         }
       }
 
+      .row-1 .column-1 {
+        background: var(--gradient-180-0-desc);
+      }
+
+      .row-1 .column-2 {
+        background: var(--gradient-90-270-desc);
+      }
+
+      .row-2 .column-1 {
+        background: var(--gradient-300-120-desc);
+      }
+
+      .row-2 .column-2 {
+        background: var(--gradient-210-30-desc);
+      }
+
+      .row-3 .column-1 {
+        background: var(--gradient-60-240-desc);
+      }
+
+      .row-3 .column-2 {
+        background: var(--gradient-330-150-desc);
+      }
+
+      .row-4 .column-1 {
+        background: var(--gradient-90-270-asc);
+      }
+
+      .row-4 .column-2 {
+        background: var(--gradient-180-0-asc);
+      }
+
+      .row-5 .column-1 {
+        background: var(--gradient-210-30-asc);
+      }
+
+      .row-5 .column-2 {
+        background: var(--gradient-300-120-asc);
+      }
+
+      .row-6 .column-1 {
+        background: var(--gradient-330-150-asc);
+      }
+
+      .row-6 .column-2 {
+        background: var(--gradient-60-240-asc);
+      }
+
+      .footer {
+        border-bottom: none;
+
+        position: relative;
+
+        height: calc(100% * 1 / 8);
+        width: 100%;
+      }
+
+      .footer .left,
+      .footer .center,
+      .footer .right {
+        display: inline-block;
+
+        height: 100%;
+      }
+
+      .footer .left,
+      .footer .right {
+        width: calc(calc(100% / 2) - calc(calc(100% / 6) / 2));
+      }
+
+      .footer .center {
+        width: calc(100% / 6);
+      }
+
+      .footer .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
       @media screen {
-        .experience .first.cell .text-content {
-          font-size: 3vmin;
+        .footer .icon {
+          font-size: 4vh;
         }
       }
 
       @media print {
-        .experience .first.cell .text-content {
-          font-size: 24pt;
+        .footer .icon {
+          font-size: 32pt;
         }
       }
 
@@ -204,7 +432,26 @@
 
       @media screen {
         .footer .text-content {
-          font-size: 2vmin;
+          font-size: 2vh;
+        }
+      }
+
+      @media screen and (max-aspect-ratio: 17 / 22) {
+        .footer .text-content {
+          font-size: 0;
+        }
+
+        .footer .text-content::before {
+          font-size: 2vh;
+        }
+
+        .footer .left .text-content::before {
+          content: "Website";
+        }
+
+        .footer .right .text-content::before {
+          content: "GitHub";
+          font-size: 2vh;
         }
       }
 
@@ -213,223 +460,104 @@
           font-size: 16pt;
         }
       }
-
-      .footer {
-        position: relative;
-      }
-
-      .footer .logo {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
-      }
-
-      @media screen {
-        .footer .logo {
-          font-size: 4vmin;
-        }
-      }
-
-      @media print {
-        .footer .logo {
-          font-size: 32pt;
-        }
-      }
-
-      .blue-to-green {
-        background: linear-gradient(
-          135deg,
-          hsl(240deg, 100%, 80%),
-          hsl(120deg, 100%, 80%)
-        );
-      }
-
-      .blue-to-red {
-        background: linear-gradient(
-          135deg,
-          hsl(240deg, 100%, 80%),
-          hsl(0deg, 100%, 80%)
-        );
-      }
-
-      .cyan-to-magenta {
-        background: linear-gradient(
-          135deg,
-          hsl(180deg, 100%, 80%),
-          hsl(300deg, 100%, 80%)
-        );
-      }
-
-      .cyan-to-yellow {
-        background: linear-gradient(
-          135deg,
-          hsl(180deg, 100%, 80%),
-          hsl(60deg, 100%, 80%)
-        );
-      }
-
-      .red-to-blue {
-        background: linear-gradient(
-          135deg,
-          hsl(0deg, 100%, 80%),
-          hsl(240deg, 100%, 80%)
-        );
-      }
-
-      .red-to-green {
-        background: linear-gradient(
-          135deg,
-          hsl(0deg, 100%, 80%),
-          hsl(120deg, 100%, 80%)
-        );
-      }
-
-      .green-to-blue {
-        background: linear-gradient(
-          135deg,
-          hsl(120deg, 100%, 80%),
-          hsl(240deg, 100%, 80%)
-        );
-      }
-
-      .green-to-red {
-        background: linear-gradient(
-          135deg,
-          hsl(120deg, 100%, 80%),
-          hsl(0deg, 100%, 80%)
-        );
-      }
-
-      .magenta-to-cyan {
-        background: linear-gradient(
-          135deg,
-          hsl(300deg, 100%, 80%),
-          hsl(180deg, 100%, 80%)
-        );
-      }
-
-      .magenta-to-yellow {
-        background: linear-gradient(
-          135deg,
-          hsl(300deg, 100%, 80%),
-          hsl(60deg, 100%, 80%)
-        );
-      }
-
-      .yellow-to-cyan {
-        background: linear-gradient(
-          135deg,
-          hsl(60deg, 100%, 80%),
-          hsl(180deg, 100%, 80%)
-        );
-      }
-
-      .yellow-to-magenta {
-        background: linear-gradient(
-          135deg,
-          hsl(60deg, 100%, 80%),
-          hsl(300deg, 100%, 80%)
-        );
-      }
     </style>
   </head>
 
   <body>
     <section class="background">
       <main class="page">
-        <header class="header row">
+        <header class="header">
           <section class="text-container">
             <div class="text-content">Mike Bars</div>
           </section>
         </header>
 
-        <section class="experience row">
-          <section class="first cell magenta-to-cyan">
+        <section class="row row-1" tabindex="0">
+          <section class="column column-1">
             <section class="text-container">
               <div class="text-content">LeaseLock</div>
             </section>
           </section>
 
-          <section class="last cell red-to-green">
+          <section class="column column-2">
             <section class="text-container">
               <div class="text-content">Lead Software Engineer</div>
             </section>
           </section>
         </section>
 
-        <section class="experience row">
-          <section class="first cell yellow-to-magenta">
+        <section class="row row-2" tabindex="0">
+          <section class="column column-1">
             <section class="text-container">
               <div class="text-content">SimSpace</div>
             </section>
           </section>
 
-          <section class="last cell green-to-blue">
+          <section class="column column-2">
             <section class="text-container">
               <div class="text-content">Lead Software Engineer</div>
             </section>
           </section>
         </section>
 
-        <section class="experience row">
-          <section class="first cell cyan-to-yellow">
+        <section class="row row-3" tabindex="0">
+          <section class="column column-1">
             <section class="text-container">
               <div class="text-content">GoodRx</div>
             </section>
           </section>
 
-          <section class="last cell blue-to-red">
+          <section class="column column-2">
             <section class="text-container">
               <div class="text-content">Lead Software Engineer</div>
             </section>
           </section>
         </section>
 
-        <section class="experience row">
-          <section class="first cell green-to-red">
+        <section class="row row-4" tabindex="0">
+          <section class="column column-1">
             <section class="text-container">
               <div class="text-content">Social Native</div>
             </section>
           </section>
 
-          <section class="last cell cyan-to-magenta">
+          <section class="column column-2">
             <section class="text-container">
               <div class="text-content">Software Engineer</div>
             </section>
           </section>
         </section>
 
-        <section class="experience row">
-          <section class="first cell blue-to-green">
+        <section class="row row-5" tabindex="0">
+          <section class="column column-1">
             <section class="text-container">
               <div class="text-content">Ford Motor Company</div>
             </section>
           </section>
 
-          <section class="last cell magenta-to-yellow">
+          <section class="column column-2">
             <section class="text-container">
               <div class="text-content">Software Engineer</div>
             </section>
           </section>
         </section>
 
-        <section class="experience row">
-          <section class="first cell red-to-blue">
+        <section class="row row-6" tabindex="0">
+          <section class="column column-1">
             <section class="text-container">
               <div class="text-content">University of Illinois</div>
             </section>
           </section>
 
-          <section class="last cell yellow-to-cyan">
+          <section class="column column-2">
             <section class="text-container">
               <div class="text-content">B.S. Electrical Engineering</div>
             </section>
           </section>
         </section>
 
-        <footer class="footer row">
-          <section class="first cell">
+        <footer class="footer">
+          <section class="left">
             <a
               href="https://mikebars.github.io/"
               class="link"
@@ -442,28 +570,34 @@
             </a>
           </section>
 
-          <section class="middle cell">
+          <section class="center">
             <section class="text-container">
               <svg
-                class="logo"
+                class="icon"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 width="1em"
                 height="1em"
                 viewBox="0 0 10 10"
               >
-                <g id="logo">
-                  <rect fill="black" x="0" y="0" width="4" height="2" />
-                  <rect fill="black" x="6" y="0" width="4" height="2" />
-                  <rect fill="black" x="0" y="4" width="2" height="6" />
-                  <rect fill="black" x="4" y="4" width="2" height="4" />
-                  <rect fill="black" x="8" y="4" width="2" height="6" />
+                <style>
+                  .logo .bar {
+                    fill: black;
+                  }
+                </style>
+
+                <g class="logo">
+                  <rect class="bar" x="0" y="0" width="4" height="2" />
+                  <rect class="bar" x="6" y="0" width="4" height="2" />
+                  <rect class="bar" x="0" y="4" width="2" height="6" />
+                  <rect class="bar" x="4" y="4" width="2" height="4" />
+                  <rect class="bar" x="8" y="4" width="2" height="6" />
                 </g>
               </svg>
             </section>
           </section>
 
-          <section class="last cell">
+          <section class="right">
             <a
               href="https://github.com/mikebars/"
               class="link"
